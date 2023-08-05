@@ -1,0 +1,259 @@
+* {
+  color: white;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main {
+  display: grid;
+  background: linear-gradient(85deg, black 45%, gray 100%);
+  grid-template-rows: 1fr 4fr 4fr 1fr;
+  grid-template-columns: 20% 80%;
+  height: 100vh;
+}
+.nav {
+  margin: auto;
+  height: 100%;
+}
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.sidebar {
+  display: grid;
+  grid-area: 1/1/5/2;
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 10px;
+  background: transparent;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+.search {
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 8px;
+  text-align: center;
+  border: 2px #101010 solid;
+  width: 50px;
+  background-color: #1f1e1e;
+  outline: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: transparent;
+  background-color: #1f1e1e;
+
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 5%;
+}
+.stickyNavbar {
+  display: flex;
+  grid-area: 1/2/2/3;
+
+  align-items: center;
+}
+
+button {
+  margin-top: 10px;
+  color: #101010;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px #101010 solid;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.text {
+  font-size: large;
+  font-weight: bold;
+}
+
+.icon {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+.rightBadge {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  right: 2%;
+}
+.install {
+  background: transparent;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 5px 10px;
+  color: white;
+  border: 2px white solid;
+}
+.profile {
+  margin-left: 25px;
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: calc(85vw - 20px);
+}
+h2 {
+  margin: auto 0;
+}
+.recentlyPlayed {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+}
+
+.covers {
+  display: flex;
+  color: #b2abab;
+  flex-direction: column;
+  position: relative;
+  width: 150px;
+  height: 180px;
+  background-color: #1f1e1e;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 1/1;
+  text-align: center;
+}
+.covers:hover img {
+  opacity: 0.5;
+}
+.shuffle:hover img {
+  opacity: 1;
+  cursor: pointer;
+}
+.covers:hover .animation {
+  top: 0;
+  cursor: pointer;
+}
+.covers button {
+  background: transparent;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 800;
+  width: 80px;
+  color: white;
+  border: 2px white solid;
+  z-index: 1;
+  margin: 30px auto;
+  transition: 300ms t;
+  cursor: pointer;
+}
+
+.animation {
+  top: 95px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+
+  transition: 300ms;
+}
+.covers img {
+  height: 100px;
+  aspect-ratio: 1/1;
+}
+.songName {
+  padding-top: 10px;
+}
+.artistName {
+  font-size: x-small;
+}
+.mostPlayed {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+}
+.heading {
+  grid-column: span 5;
+}
+footer {
+  grid-area: 4/2/5/3;
+
+  display: grid;
+  height: 55px;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+
+  align-items: center;
+
+  justify-items: center;
+}
+.controls {
+  display: grid;
+  width: 100%;
+}
+.controlsButton {
+  margin: auto;
+  display: flex;
+}
+.song {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 250px;
+}
+.smallbanner {
+  height: 50px;
+  aspect-ratio: 1/1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-self: center;
+}
+.timeline {
+  width: 100%;
+}
+.timestamp {
+  font-size: 10px;
+  display: flex;
+  justify-content: end;
+}
+#volume-slider {
+  width: 100px;
+  display: grid;
+
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+  /* padding: 0px 5px; */
+  font-size: 30px;
+  user-select: none;
+}
+.play::before {
+  content: "";
+}
+.pressed {
+  text-shadow: 0 2px 5px #b2abab;
+}
+
+.miniShuffle {
+  visibility: hidden;
+  position: absolute;
+}
+
+.pressed {
+  text-shadow: 0 2px 5px #b2abab;
+}
+input[type="range"] {
+  accent-color: #1db954;
+}

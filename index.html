@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify-Web Player</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="nav">
+          <ul class="side">
+            <li class="logo">
+              <a href="#"><img src="logo.png" alt="logo" height="30px" /></a>
+            </li>
+            <li>
+              <a href="/index.html"
+                ><span class="material-symbols-outlined"> home </span>Home</a
+              >
+            </li>
+            <li><a href="#">Your Library</a></li>
+            <li>
+              <span class="material-symbols-outlined"> search </span
+              ><input class="search" type="text" placeholder="Search" />
+            </li>
+          </ul>
+        </div>
+        <div class="box">
+          <p class="text">Create your playlist</p>
+          <button class="button">Create playlist</button>
+        </div>
+        <div class="box">
+          <p class="text">Listen to some amazing podcast</p>
+          <button>Browse podcast</button>
+        </div>
+      </div>
+      <div class="stickyNavbar">
+        <div class="icon">
+          <span><</span>
+          <span>></span>
+        </div>
+        <div class="rightBadge">
+          <button class="install">Install App</button>
+          <div class="profile">
+            <a href="#"
+              ><span class="material-symbols-outlined"> account_circle </span
+              >Profile</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="recentlyPlayed">
+        <h2 class="heading">Recently Played</h2>
+        <div class="covers" onclick="getName(this)">
+          <img src="covers/Dhol jageero da.jpg" alt="Dhol jageero da" />
+          <div class="animation">
+            <button>Play</button>
+            <span class="songName">Dhol jageero da</span>
+            <span class="artistName">Master Saleem</span>
+          </div>
+        </div>
+        <div class="covers shuffle">
+          <img src="shuffle.png" alt="shuffle.png" />
+          <button>Shuffle</button>
+        </div>
+      </div>
+      <div class="mostPlayed">
+        <h2 class="heading">Most Played</h2>
+        <div class="covers" onclick="getName(this)">
+          <img src="covers/Dhol jageero da.jpg" alt="Dhol jageero da" />
+          <div class="animation">
+            <button>Play</button>
+            <span class="songName">Dhol jageero da</span>
+            <span class="artistName">Master Saleem</span>
+          </div>
+        </div>
+        <div class="covers" onclick="getName(this)">
+          <img src="covers/Dil lutiya.jpg" alt="Dil lutiya" />
+          <div class="animation">
+            <button>Play</button>
+            <span class="songName">Dil lutiya</span>
+            <span class="artistName">Jazzy B</span>
+          </div>
+        </div>
+        <div class="covers" onclick="getName(this)">
+          <img src="covers/Panga.jpg" alt="Panga" />
+          <div class="animation">
+            <button>Play</button>
+            <span class="songName">Panga</span>
+            <span class="artistName">Diljeet and Yo Yo Honey Singh</span>
+          </div>
+        </div>
+        <div class="covers" onclick="getName(this)">
+          <img src="covers/Mittran di chhatri.jpg" alt="Mittran di chhatri" />
+          <div class="animation">
+            <button>Play</button>
+            <span class="songName">Mittran di chhatri</span>
+            <span class="artistName">Babbu Maan</span>
+          </div>
+        </div>
+        <div class="covers" onclick="getName(this)">
+          <img
+            src="covers/Sohneyo narazgi te nahi.jpg"
+            alt="Sohneyo narazgi te nahi"
+          />
+          <div class="animation">
+            <button>Play</button>
+            <span class="songName">Sohneyo narazgi te nahi</span>
+            <span class="artistName">Soni Pabla</span>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="song">
+          <img
+            class="smallbanner"
+            rowspan="2"
+            src="covers/Panga.jpg"
+            alt="Panga"
+          />
+          <span class="playingSongName">Panga</span>
+          <span class="playingArtistName">Diljeet and Yo Yo Honey Singh</span>
+        </div>
+        <div class="miniShuffle shuffle">
+          <span class="material-symbols-outlined"> shuffle </span>
+        </div>
+        <div class="controls">
+          <div class="controlsButton">
+            <span class="material-symbols-outlined previous">
+              skip_previous
+            </span>
+            <span class="material-symbols-outlined play"> play_arrow </span>
+            <span class="material-symbols-outlined next"> skip_next </span>
+          </div>
+
+          <input class="timeline" type="range" value="0" />
+
+          <span class="timestamp"></span>
+        </div>
+        <div class="volume">
+          <span class="material-symbols-outlined mute"> volume_up </span>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+            id="volume-slider"
+            onchange="changevolume(this.value)"
+          />
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
