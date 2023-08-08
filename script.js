@@ -147,6 +147,8 @@ previous.addEventListener("click", () => {
   currentSong = randomSong.name;
   currentArtist = randomSong.artist;
   play(currentSong, currentArtist);
+   if(randomIndex===0){
+    randomIndex=10}
 });
 //next
 next.addEventListener("click", () => {
@@ -156,6 +158,8 @@ next.addEventListener("click", () => {
   currentSong = randomSong.name;
   currentArtist = randomSong.artist;
   play(currentSong, currentArtist);
+  if(randomIndex===10){
+    randomIndex=0}
 });
 //mute
 
